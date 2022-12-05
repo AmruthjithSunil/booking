@@ -49,6 +49,20 @@
     border: 1px solid #ccc;
   }
   
+  .edit {
+    background-color: rgb(61, 190, 61);
+    padding: 2px 2px;
+    float: right;
+    width: 10%;
+  }
+
+  .del{
+    background-color: rgb(165, 5, 5);
+    padding: 2px;
+    width: 5%;
+    float: right;
+  }
+
   .btn {
     display: block;
     width: 100%;
