@@ -2,7 +2,7 @@ let form = document.getElementById('my-form')
 let name = document.getElementById('name');
 let email = document.getElementById('email');
 let users = document.getElementById('users');
-const endpointId = '28554357ecae45359ea888f37169595e';
+const endpointId = '7acda206c4fb4492947eb719e3662858';
 const serverLink = `https://crudcrud.com/api/${endpointId}/user`;
 
 addEventListener('DOMContentLoaded', () => {
@@ -11,7 +11,7 @@ addEventListener('DOMContentLoaded', () => {
     .then(res => {
         const userJSON= res.data;
         for(let i=0; i<userJSON.length; i++){
-            addUserToDisplay(userJSON[i]);
+            userDisplay(userJSON[i]);
         }
     })
     .catch(err => console.log(err));
@@ -49,7 +49,7 @@ function submitFn(e){
         name: name.value,
         email: email.value
     };
-    addUserToDisplay(user);
+    userDisplay(user);
 
     //uploading the new user details to server
     axios.post(serverLink,user)
